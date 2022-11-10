@@ -10,11 +10,12 @@ function Color(props) {
                     </h1>
                 </div>
                 <div className="color-card ">
-                    {props.allColors.map(colorCode =>
+                    {props.allColors.map((colorCode, i) =>
                         <div className="card-container1" key={colorCode}>
                             <div className="color " style={{ backgroundColor: `${colorCode}` }}></div>
                             <div className="color-details flex">
-                                <p>50</p>
+                                
+                                <p>{i === 0? 50 : i*100}</p>
                                 <p>{colorCode}</p>
                             </div>
 
